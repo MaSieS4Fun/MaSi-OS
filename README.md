@@ -106,11 +106,11 @@ If the AppID remains present, Steam attempts to validate the package and the com
 
 _____
 
-Credits
-Armbian Team
-Valve Corporation (Steam)
-Lossless Scaling developers
-Community contributors and testers
+#### Credits
+- Armbian Team
+- Valve Corporation (Steam)
+- Lossless Scaling developers
+- Community contributors and testers
 _____
 
 This project is an independent community effort and is not affiliated with AYN, Armbian, Valve or the developers of Lossless Scaling.
