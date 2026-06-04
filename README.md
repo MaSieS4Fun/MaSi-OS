@@ -1,9 +1,10 @@
-# MaSi-OS
+### MaSi-OS
 ARMBIAN, SteamOS like for AYN Odin 2, 2 Porral, 2 Mini and AYN Thor 
+
 -
 # AYN Armbian Gaming Image
 
-Preconfigured Armbian image for:
+Preconfigured Armbian image for
 
 AYN Odin 2
 AYN Odin 2 Portal
@@ -20,6 +21,7 @@ Gaming-oriented tweaks
 Performance optimizations
 
 -
+
 What is NOT included
 
 This project does not contain:
