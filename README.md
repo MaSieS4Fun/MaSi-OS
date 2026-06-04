@@ -86,7 +86,9 @@ After signing in to Steam, install the following components:
 
 **Important:** Do not confuse **Proton 11 (ARM)** with the standard **Proton 11** release. The ARM version is required.
 
-## Proton 11 (ARM) Fix
+## Known Issues
+
+### Proton 11 (ARM) Fix
 
 To ensure Proton 11 (ARM) launches games correctly, edit the following file:
 
