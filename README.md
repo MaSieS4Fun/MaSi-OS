@@ -105,8 +105,6 @@ Armbian Team
 Valve Corporation (Steam)
 Lossless Scaling developers
 Community contributors and testers
-Disclaimer
-
 _____
 
 This project is an independent community effort and is not affiliated with AYN, Armbian, Valve or the developers of Lossless Scaling.
