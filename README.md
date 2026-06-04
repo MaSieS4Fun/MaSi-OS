@@ -75,6 +75,7 @@ The system boots into the KDE Plasma Desktop environment by default.
 Before launching Gaming Mode for the first time, you must sign in to Steam from the desktop session.
 
 If you skip this step, Gaming Mode may enter an update loop where Steam continuously attempts to update itself, fails because the ARM build is currently distributed as a beta, and prevents further interaction.
+____________
 
 ### Known Issues
 
@@ -85,7 +86,7 @@ After signing in to Steam, install the following components:
 
 **Important:** Do not confuse **Proton 11 (ARM)** with the standard **Proton 11** release. The ARM version is required.
 
-### Proton 11 (ARM) Fix
+## Proton 11 (ARM) Fix
 
 To ensure Proton 11 (ARM) launches games correctly, edit the following file:
 
