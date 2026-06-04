@@ -1,7 +1,7 @@
 # MaSi-OS
 ARMBIAN, SteamOS like for AYN Odin 2, 2 Porral, 2 Mini and AYN Thor 
-
-AYN Armbian Gaming Image
+-
+# AYN Armbian Gaming Image
 
 Preconfigured Armbian image for:
 
@@ -18,6 +18,8 @@ Steam preconfigured
 Lossless Scaling preconfigured
 Gaming-oriented tweaks
 Performance optimizations
+
+-
 What is NOT included
 
 This project does not contain:
@@ -30,7 +32,7 @@ Proprietary game assets
 
 Users are responsible for obtaining and using software according to the corresponding licenses.
 
-Installation
+# Installation
 
 Installation is simple. Flash image to SD card using balenaEtcher or rufus.
 
@@ -96,6 +98,8 @@ Remove line 5:
 Removing this entry disables Steam's application validation check for the tool.
 
 If the AppID remains present, Steam attempts to validate the package and the compatibility tool may fail to launch correctly. After removing the line, Proton 11 (ARM) should operate normally.
+
+-
 
 Supported Devices
 Device	Status
