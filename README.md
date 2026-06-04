@@ -98,14 +98,7 @@ Removing this entry disables Steam's application validation check for the tool.
 
 If the AppID remains present, Steam attempts to validate the package and the compatibility tool may fail to launch correctly. After removing the line, Proton 11 (ARM) should operate normally.
 
--
-
-Supported Devices
-Device	Status
-AYN Odin 2	Supported
-AYN Odin 2 Portal	Supported
-AYN Odin 2 Mini	Supported
-AYN Thor	Supported
+_____
 
 Credits
 Armbian Team
@@ -114,7 +107,7 @@ Lossless Scaling developers
 Community contributors and testers
 Disclaimer
 
-
+_____
 
 This project is an independent community effort and is not affiliated with AYN, Armbian, Valve or the developers of Lossless Scaling.
 
