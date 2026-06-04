@@ -37,6 +37,9 @@ Installation is simple. Flash image to SD card using balenaEtcher or rufus.
 
 ## Warning 1
 
+Flash cutom ABL for ARMBIAN.
+[LINK](https://github.com/strongtz/linux-next/releases/tag/odin2-abl)
+
 Before proceeding, make a backup of your device's ABL and keep a copy stored safely on your PC.
 
 Rocknix uses a different ABL implementation. If your device is currently using the Rocknix ABL, you must first restore the default AYN ABL and then apply the custom ABL required for Armbian.
