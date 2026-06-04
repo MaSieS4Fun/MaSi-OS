@@ -1,6 +1,9 @@
 # MaSi-OS
 ARMBIAN, SteamOS like for AYN ODIN 2, ODIN 2 Poral, ODIN 2 Mini and AYN Thor.
+
+Can joind [Discord](https://discord.gg/Mqegm7PvV9)
 ________________
+
 ### AYN Armbian Gaming Image
 
 Preconfigured Armbian image for
