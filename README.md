@@ -68,6 +68,8 @@ The available DTB files can be found in the boot partition.
 
 ## Warning 2
 
+ROOT and USER password = 1234
+
 The system boots into the KDE Plasma Desktop environment by default.
 
 Before launching Gaming Mode for the first time, you must sign in to Steam from the desktop session.
