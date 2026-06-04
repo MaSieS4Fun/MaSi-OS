@@ -77,8 +77,6 @@ Before launching Gaming Mode for the first time, you must sign in to Steam from 
 If you skip this step, Gaming Mode may enter an update loop where Steam continuously attempts to update itself, fails because the ARM build is currently distributed as a beta, and prevents further interaction.
 ____________
 
-### Known Issues
-
 After signing in to Steam, install the following components:
 
 * Runtime 4 ARM
