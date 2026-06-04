@@ -34,11 +34,10 @@ Users are responsible for obtaining and using software according to the correspo
 # Installation
 
 Installation is simple. Flash image to SD card using balenaEtcher or rufus.
-
-## Warning 1
-
 Flash cutom ABL for ARMBIAN.
 [LINK](https://github.com/strongtz/linux-next/releases/tag/odin2-abl)
+
+## Warning 1
 
 Before proceeding, make a backup of your device's ABL and keep a copy stored safely on your PC.
 
