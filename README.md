@@ -1,5 +1,5 @@
 # MaSi-OS
-ARMBIAN, SteamOS like for AYN Odin 2, 2 Porral, 2 Mini and AYN Thor.
+ARMBIAN, SteamOS like for AYN Odin 2, ODIN 2 Poral, ODIN 2 Mini and AYN Thor.
 ________________
 ### AYN Armbian Gaming Image
 
