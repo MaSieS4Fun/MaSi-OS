@@ -34,6 +34,7 @@ Users are responsible for obtaining and using software according to the correspo
 # Installation
 
 Installation is simple. Flash image to SD card using balenaEtcher or rufus.
+[HERE](https://github.com/MaSieS4Fun/MaSi-OS/releases/tag/v1.0)
 
 Flash cutom ABL for ARMBIAN.
 [LINK](https://github.com/strongtz/linux-next/releases/tag/odin2-abl)
