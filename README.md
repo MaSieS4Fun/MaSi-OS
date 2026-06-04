@@ -1,28 +1,25 @@
 ### MaSi-OS
-ARMBIAN, SteamOS like for AYN Odin 2, 2 Porral, 2 Mini and AYN Thor 
-
--
+ARMBIAN, SteamOS like for AYN Odin 2, 2 Porral, 2 Mini and AYN Thor.
+________________
 # AYN Armbian Gaming Image
 
 Preconfigured Armbian image for
 
-AYN Odin 2
-AYN Odin 2 Portal
-AYN Odin 2 Mini
-AYN Thor
+- AYN Odin 2
+- AYN Odin 2 Portal
+- AYN Odin 2 Mini
+- AYN Thor
 
-Features
-Latest stable Armbian base system
-Updated kernel
-Updated GPU drivers
-Steam preconfigured
-Lossless Scaling preconfigured
-Gaming-oriented tweaks
-Performance optimizations
-
--
-
-What is NOT included
+Features.
+- Latest stable Armbian base system
+- Updated kernel
+- Updated GPU drivers
+- Steam preconfigured
+- Lossless Scaling preconfigured
+- Gaming-oriented tweaks
+- Performance optimizations
+_____________
+What is NOT included.
 
 This project does not contain:
 
