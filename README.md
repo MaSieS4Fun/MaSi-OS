@@ -109,6 +109,19 @@ Remove line 5:
 Removing this entry disables Steam's application validation check for the tool.
 
 If the AppID remains present, Steam attempts to validate the package and the compatibility tool may fail to launch correctly. After removing the line, Proton 11 (ARM) should operate normally.
+_____
+
+## Support the Project
+
+If you find this project useful and would like to support its continued development, testing, and maintenance, you can make a voluntary contribution via PayPal.
+
+Your support helps cover development time, hardware testing, storage, and future improvements.
+
+**PayPal:**
+
+[Donate via PayPal](https://paypal.me/masies4fun)
+
+Thank you to everyone who uses, tests, reports issues, and contributes to the project.
 
 _____
 
