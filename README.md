@@ -42,6 +42,8 @@ Installation is simple. Flash image to SD card using balenaEtcher or rufus.
 Flash cutom ABL for ARMBIAN.
 [LINK](https://github.com/strongtz/linux-next/releases/tag/odin2-abl)
 
+You can follow the guide on [YouTube](https://www.youtube.com/watch?v=txjB7dYeyIk), which includes some additional configurations.
+
 ## Warning 1
 
 Before proceeding, make a backup of your device's ABL and keep a copy stored safely on your PC.
