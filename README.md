@@ -57,22 +57,6 @@ Rocknix uses a different ABL implementation. If your device is currently using t
 
 This image is preconfigured to boot on the AYN Odin 2 (Base model).
 
-If you are using an Odin 2 Portal, Odin 2 Mini, or AYN Thor, the required DTB files are already included in the FAT32 boot partition.
-
-To boot correctly on your device:
-
-1. Open the file `LinuxLoader.cfg`.
-2. Locate line 56.
-3. Replace:
-
-```text
-qcs8550-ayn-odin2.dtb
-```
-
-with the DTB file corresponding to your device model.
-
-The available DTB files can be found in the boot partition.
-
 ---
 
 ## Warning 2
