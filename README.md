@@ -1,5 +1,5 @@
 # MaSi-OS
-ARMBIAN, SteamOS like for AYN ODIN 2, ODIN 2 Poral, ODIN 2 Mini and AYN Thor.
+ARMBIAN, SteamOS like for AYN ODIN 2.
 
 Can join [Discord](https://discord.gg/Mqegm7PvV9)
 ________________
@@ -8,10 +8,13 @@ ________________
 
 Preconfigured Armbian image for
 
-- AYN Odin 2
-- AYN Odin 2 Portal
-- AYN Odin 2 Mini
-- AYN Thor
+- AYN Odin 2 
+
+## REMARK
+Images with a superior kernel could accommodate support for ODIN 2 Portal, mini and AYN Thor.
+But for some reason related to kernel development or compilation, it loses around 40 to 50% performance.
+That's why I've decided to use the best kernel in terms of optimization and performance. Unfortunately,
+it's not compatible with ODIN 2 Portal, mini, and AYN Thor.
 
 Features.
 - Latest stable Armbian base system
