@@ -117,9 +117,9 @@ Multidevice images do **not** need manual device-tree selection — the ABL sele
 
 ## First boot
 
-**Default passwords (all images):** `root` and user = **`1234`** — change them after first login.
+**Default passwords:** `root` and user = **`1234`** — change them after first login.
 
-The steps below apply **only to the SteamOS image**.
+### SteamOS / gaming images
 
 Before opening **Gaming Mode** for the first time, **sign in to Steam from the desktop session**.
 
@@ -130,7 +130,13 @@ After signing in, install in Steam:
 - **Runtime 4 ARM**
 - **Proton 11 (ARM)** — not the x86 Proton 11 package
 
-**Plasma Mobile, Desktop Only, and Clean Install** boot straight into Plasma (Mobile or Desktop) with no Gaming Mode setup required.
+### Desktop Only / Plasma Mobile
+
+Boot goes to Plasma (Desktop or Mobile). Configure Steam and tools from the desktop if you use those images.
+
+### Clean Install
+
+Standard Plasma Desktop session — no preconfigured Steam session. Use as a normal Armbian handheld Linux install.
 
 ---
 
