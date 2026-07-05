@@ -1,0 +1,1 @@
+7bb6400c82035f0a935ffed047711baaadfcc391e78e3590fcc88435baad787b  MaSi-OS-Clean-Install-KDE.img.gz

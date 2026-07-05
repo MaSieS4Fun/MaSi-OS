@@ -1,87 +1,149 @@
 # MaSi-OS
-ARMBIAN, SteamOS like for AYN ODIN 2.
 
-Can join [Discord](https://discord.gg/Mqegm7PvV9)
-________________
+Preconfigured **Armbian** images for Qualcomm **SM8550** handhelds — SteamOS-like gaming, Plasma Desktop, or a clean base install.
 
-### AYN Armbian Gaming Image
-
-Preconfigured Armbian image for
-
-- AYN Odin 2 
-
-## REMARK
-Images with a superior kernel could accommodate support for ODIN 2 Portal, mini and AYN Thor.
-But for some reason related to kernel development or compilation, it loses around 40 to 50% performance.
-That's why I've decided to use the best kernel in terms of optimization and performance. Unfortunately,
-it's not compatible with ODIN 2 Portal, mini, and AYN Thor.
-
-Features.
-- Latest stable Armbian base system
-- Updated kernel
-- Updated GPU drivers
-- Steam preconfigured
-- Lossless Scaling preconfigured
-- Gaming-oriented tweaks
-- Performance optimizations
-_____________
-What is NOT included.
-
-This project does not contain:
-
-ROMs
-BIOS files
-Emulators
-Copyrighted game content
-Proprietary game assets
-
-Users are responsible for obtaining and using software according to the corresponding licenses.
-
-# Installation
-
-Installation is simple. Flash image to SD card using balenaEtcher or rufus.
-[HERE](https://github.com/MaSieS4Fun/MaSi-OS/releases/tag/v1.0)
-
-Flash cutom ABL for ARMBIAN.
-[LINK](https://github.com/strongtz/linux-next/releases/tag/odin2-abl)
-
-You can follow the guide on [YouTube](https://www.youtube.com/watch?v=txjB7dYeyIk), which includes some additional configurations.
-
-## Warning 1
-
-Before proceeding, make a backup of your device's ABL and keep a copy stored safely on your PC.
-
-Rocknix uses a different ABL implementation. If your device is currently using the Rocknix ABL, you must first restore the default AYN ABL and then apply the custom ABL required for Armbian.
-
-### Device Tree Configuration
-
-This image is preconfigured to boot on the AYN Odin 2 (Base model).
+Join the community on [Discord](https://discord.gg/Mqegm7PvV9).
 
 ---
 
-## Warning 2
+## Supported devices
 
-ROOT and USER password = 1234
+One image set boots on multiple AYN and compatible handhelds via an **ABL multidevice `boot/KERNEL`** (11-DTB chain — same idea as ROCKNIX):
 
-The system boots into the KDE Plasma Desktop environment by default.
+| Device | Status |
+|--------|--------|
+| AYN Odin 2 | Supported |
+| AYN Odin 2 Mini | Supported |
+| AYN Odin 2 Portal | Supported |
+| AYN Thor | Supported |
+| Retroid Pocket 6 | Same bootimg format (DTB chain slots 9–10) |
 
-Before launching Gaming Mode for the first time, you must sign in to Steam from the desktop session.
+The **ABL picks the correct device tree automatically**. Do **not** add `devicetree=` or `dtb=` to the boot cmdline.
 
-If you skip this step, Gaming Mode may enter an update loop where Steam continuously attempts to update itself, fails because the ARM build is currently distributed as a beta, and prevents further interaction.
-____________
+Kernel build and updates: **[MaSi-OS Kernel Updater](https://github.com/MaSieS4Fun/MaSi-OS-Kernel-Updater)**.
 
-After signing in to Steam, install the following components:
+---
 
-* Runtime 4 ARM
-* Proton 11 (ARM)
+## Gaming performance — fixed
 
-**Important:** Do not confuse **Proton 11 (ARM)** with the standard **Proton 11** release. The ARM version is required.
+Recent multidevice / upstream-style kernels on SM8550 often lose **40–50% gaming FPS** once USB, Wi‑Fi, and audio are fully active. That is usually **standard vs performance tuning** (scheduler, cmdline, initrd, governors) — not broken drivers.
 
-## Known Issues
+**MaSi-OS images ship with the performance-tuned profile** used by the Kernel Updater:
 
-### Proton 11 (ARM) Fix
+- Gaming kernel config (`golden.config`) — cluster scheduling, tuned storage, PSI off
+- Short gaming cmdline — **no** `irqaffinity=0-2`, `psi=0`
+- Small ABL initrd — firmware and modules on rootfs, fits bootimg limits
+- Full peripherals **and** low-latency gaming on the same binary
 
-To ensure Proton 11 (ARM) launches games correctly, edit the following file:
+Technical breakdown: **[GAMING-PERFORMANCE.md](https://github.com/MaSieS4Fun/MaSi-OS-Kernel-Updater/blob/main/docs/GAMING-PERFORMANCE.md)** (Kernel Updater repo).
+
+### Performance demos
+
+Same game, same device — tuned kernel vs standard multidevice build:
+
+| | MaSi-OS (performance-tuned) | Standard kernel (FPS loss) |
+|---|------------------------------|----------------------------|
+| Demo video | [Add link — upload to Releases](https://github.com/MaSieS4Fun/MaSi-OS/releases) | [Add link — upload to Releases](https://github.com/MaSieS4Fun/MaSi-OS/releases) |
+
+Replace the links above when the comparison clips are published (short ~5 MB captures work well in Releases).
+
+---
+
+## Image variants
+
+Four prebuilt images share the same **multidevice kernel stack** and base Armbian SM8550 system. They differ in desktop session and preconfiguration.
+
+| Variant | Session / UX | Best for |
+|---------|--------------|----------|
+| **SteamOS** | Gamescope + Steam Gaming Mode (SteamOS-like) | Play PC games with Steam ARM + Proton; boot straight into gaming UX |
+| **Plasma Mobile** | KDE Plasma Mobile | Handheld-first touch UI, mobile workflows |
+| **Desktop Only** | KDE Plasma Desktop | Traditional desktop; gaming tools available without SteamOS session |
+| **Clean Install** | KDE Plasma Desktop only | Fresh Linux install — **no** Steam, Lossless Scaling, or extra gaming preconfig |
+
+**Downloads:** [Releases](https://github.com/MaSieS4Fun/MaSi-OS/releases) — verify with the `*_SHA256SUMS.txt` files bundled per variant.
+
+### Shared stack (gaming variants + Desktop Only)
+
+- Latest stable Armbian base (SM8550)
+- **Multidevice performance-tuned kernel** (ABL `boot/KERNEL`)
+- Updated Mesa / GPU stack
+- Steam preconfigured *(SteamOS, Plasma Mobile, Desktop Only)*
+- Lossless Scaling preconfigured *(SteamOS, Plasma Mobile, Desktop Only)*
+- Gamescope, MangoHud, GOverlay, Lutris, AntiMicroX *(where applicable)*
+- Gaming-oriented system tweaks
+
+**Clean Install** includes Armbian + Plasma Desktop + the same multidevice kernel — you add software yourself.
+
+---
+
+## What is NOT included
+
+This project does not contain:
+
+- ROMs
+- BIOS files
+- Emulators (as bundled copyrighted packs)
+- Copyrighted game content
+- Proprietary game assets
+
+Users are responsible for obtaining and using software according to the corresponding licenses.
+
+---
+
+## Installation
+
+1. **Back up your device ABL** and keep a copy on your PC.
+2. Download the image variant you want from **[Releases](https://github.com/MaSieS4Fun/MaSi-OS/releases)**.
+3. Flash the `.img` (or `.img.gz`) to SD card with [balenaEtcher](https://etcher.balena.io/) or Rufus.
+4. Flash the **custom ABL for Armbian** required for SM8550 Linux boot:  
+   [strongtz/linux-next — odin2-abl](https://github.com/strongtz/linux-next/releases/tag/odin2-abl)  
+   *(Compatible with multidevice `boot/KERNEL` images.)*
+
+### ABL / Rocknix note
+
+Rocknix uses a different ABL layout. If your device currently runs the Rocknix ABL, restore the **default AYN ABL** first, then flash the Armbian ABL linked above.
+
+Multidevice images do **not** need manual device-tree selection — the bootloader selects the correct DTB from the embedded chain.
+
+### Video guides
+
+| Topic | Guide |
+|-------|--------|
+| MaSi-OS SteamOS-style image — flash & setup | [YouTube](https://www.youtube.com/watch?v=txjB7dYeyIk) |
+| Install & configure Steam + Proton ARM | [YouTube](https://www.youtube.com/watch?v=hT6jeC8ebWY) |
+
+---
+
+## First boot
+
+**Default passwords:** `root` and user = **`1234`** — change them after first login.
+
+### SteamOS / gaming images
+
+Before opening **Gaming Mode** for the first time, **sign in to Steam from the desktop session**.
+
+If you skip this, Gaming Mode may loop on Steam updates (ARM Steam is still beta-heavy) and block interaction.
+
+After signing in, install in Steam:
+
+- **Runtime 4 ARM**
+- **Proton 11 (ARM)** — not the x86 Proton 11 package
+
+### Desktop Only / Plasma Mobile
+
+Boot goes to Plasma (Desktop or Mobile). Configure Steam and tools from the desktop if you use those images.
+
+### Clean Install
+
+Standard Plasma Desktop session — no preconfigured Steam session. Use as a normal Armbian handheld Linux install.
+
+---
+
+## Known issues
+
+### Proton 11 (ARM) — toolmanifest fix
+
+If Proton 11 (ARM) fails to launch games, edit:
 
 ```text
 ~/.local/share/Steam/steamapps/common/Proton 11.0 (ARM64)/toolmanifest.vdf
@@ -93,32 +155,44 @@ Remove line 5:
 "require_tool_appid" "4185400"
 ```
 
-Removing this entry disables Steam's application validation check for the tool.
+That disables Steam’s validation check for the tool. With the AppID present, the compatibility tool may not start correctly.
 
-If the AppID remains present, Steam attempts to validate the package and the compatibility tool may fail to launch correctly. After removing the line, Proton 11 (ARM) should operate normally.
-_____
+---
 
-## Support the Project
+## Update kernel only (keep your rootfs)
 
-If you find this project useful and would like to support its continued development, testing, and maintenance, you can make a voluntary contribution via PayPal.
+To rebuild or refresh the multidevice gaming kernel on an existing MaSi-OS install without reflashing the full image:
 
-Your support helps cover development time, hardware testing, storage, and future improvements.
+```bash
+git clone https://github.com/MaSieS4Fun/MaSi-OS-Kernel-Updater.git
+cd MaSi-OS-Kernel-Updater
+./make.sh
+sudo ./update.sh
+```
 
-**PayPal:**
+See the [Kernel Updater README](https://github.com/MaSieS4Fun/MaSi-OS-Kernel-Updater) for requirements and options.
 
-[Donate via PayPal](https://paypal.me/masies4fun)
+---
 
-Thank you to everyone who uses, tests, reports issues, and contributes to the project.
+## Support the project
 
-_____
+If this helps you and you want to support development, testing, and hosting:
 
-#### Credits
-- Armbian Team
-- Valve Corporation (Steam)
+**[Donate via PayPal](https://paypal.me/masies4fun)**
+
+Thank you to everyone who uses, tests, reports issues, and contributes.
+
+---
+
+## Credits
+
+- [Armbian](https://www.armbian.com/) team
+- [Valve](https://store.steampowered.com/) (Steam)
 - Lossless Scaling developers
 - Community contributors and testers
-_____
 
-This project is an independent community effort and is not affiliated with AYN, Armbian, Valve or the developers of Lossless Scaling.
+---
 
-Special thanks to the Armbian team for their dedication, hard work and continued support of the ARM Linux ecosystem.
+This is an independent community project. It is **not** affiliated with AYN, Armbian, Valve, or the developers of Lossless Scaling.
+
+Special thanks to the Armbian team for their work on the ARM Linux ecosystem.
