@@ -95,15 +95,16 @@ Users are responsible for obtaining and using software according to the correspo
 1. **Back up your device ABL** and keep a copy on your PC.
 2. Download the image variant you want from **[Releases](https://github.com/MaSieS4Fun/MaSi-OS/releases)**.
 3. Flash the `.img` (or `.img.gz`) to SD card with [balenaEtcher](https://etcher.balena.io/) or Rufus.
-4. Flash the **custom ABL for Armbian** required for SM8550 Linux boot:  
-   [strongtz/linux-next — odin2-abl](https://github.com/strongtz/linux-next/releases/tag/odin2-abl)  
-   *(Compatible with multidevice `boot/KERNEL` images.)*
+4. Use the **[ROCKNIX ABL](https://github.com/ROCKNIX/abl)** on your device.  
+   MaSi-OS is adapted for **EFI boot compatibility** and the same multidevice **`boot/KERNEL`** layout as ROCKNIX — so you can keep or flash the ROCKNIX ABL instead of a separate custom bootloader. That makes dual-booting and switching between ROCKNIX and MaSi-OS much easier.
 
-### ABL / Rocknix note
+   If you already run ROCKNIX on your handheld, you usually **do not need to change the ABL** — flash the MaSi-OS image and boot from SD (or your usual ROCKNIX boot path).
 
-Rocknix uses a different ABL layout. If your device currently runs the Rocknix ABL, restore the **default AYN ABL** first, then flash the Armbian ABL linked above.
+   If you are on stock AYN firmware, back up your ABL first, then install the ROCKNIX ABL from the repo above before first boot.
 
-Multidevice images do **not** need manual device-tree selection — the bootloader selects the correct DTB from the embedded chain.
+### Boot / device tree
+
+Multidevice images do **not** need manual device-tree selection — the ABL selects the correct DTB from the embedded 11-DTB chain.
 
 ### Video guides
 
