@@ -38,15 +38,30 @@ Recent multidevice / upstream-style kernels on SM8550 often lose **40–50% gami
 
 Technical breakdown: **[GAMING-PERFORMANCE.md](https://github.com/MaSieS4Fun/MaSi-OS-Kernel-Updater/blob/main/docs/GAMING-PERFORMANCE.md)** (Kernel Updater repo).
 
-### Performance demos
+## Performance comparison
 
-Same game, same device — tuned kernel vs standard multidevice build:
+Same game, same settings, same device — **only the kernel differs**.
 
-| | MaSi-OS (performance-tuned) | Standard kernel (FPS loss) |
-|---|------------------------------|----------------------------|
-| Demo video | [Add link — upload to Releases](https://github.com/MaSieS4Fun/MaSi-OS/releases) | [Add link — upload to Releases](https://github.com/MaSieS4Fun/MaSi-OS/releases) |
+| Tuned kernel (this project) | Default Armbian kernel config |
+|---------------------------|-------------------------------|
+| **~50–60 FPS, smooth** | **~40 FPS, stutters** (~40–50% loss) |
 
-Replace the links above when the comparison clips are published (short ~5 MB captures work well in Releases).
+<table>
+<tr>
+<td width="50%" align="center">
+
+**Tuned kernel**
+<video src="https://github.com/user-attachments/assets/700702b9-6073-487a-8e7d-4af519503dec" width="100%" controls muted></video>
+
+</td>
+<td width="50%" align="center">
+
+**Default Armbian config**
+<video src="https://github.com/user-attachments/assets/053ca87f-cfc2-4c3a-8ab8-d50dc07d6c62" width="100%" controls muted></video>
+
+</td>
+</tr>
+</table>
 
 ---
 
