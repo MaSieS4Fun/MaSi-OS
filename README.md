@@ -19,6 +19,7 @@ One image set boots on multiple AYN and compatible handhelds via an **ABL multid
 | Retroid Pocket 6 | Same bootimg format (DTB chain slots 9–10) |
 
 The **ABL picks the correct device tree automatically**. Do **not** add `devicetree=` or `dtb=` to the boot cmdline.
+Just flash SD card and enjoy.
 
 Kernel build and updates: **[MaSi-OS Kernel Updater](https://github.com/MaSieS4Fun/MaSi-OS-Kernel-Updater)**.
 
