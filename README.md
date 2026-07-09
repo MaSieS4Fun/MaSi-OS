@@ -1,6 +1,6 @@
 # MaSi-OS
 
-Preconfigured **Armbian** images for Qualcomm **SM8550** handhelds — SteamOS-like gaming, Plasma Desktop, or a clean base install.
+Preconfigured **Armbian** images for Qualcomm **SM8550** handhelds — gaming, Plasma Desktop, or a clean base install.
 
 Join the community on [Discord](https://discord.gg/Mqegm7PvV9).
 
@@ -71,10 +71,10 @@ Four prebuilt images share the same **multidevice kernel stack** and base Armbia
 
 | Variant | Session / UX | Best for |
 |---------|--------------|----------|
-| **SteamOS** | Gamescope + Steam Gaming Mode (SteamOS-like) | Play PC games with Steam ARM + Proton; boot straight into gaming UX |
 | **Plasma Mobile** | KDE Plasma Mobile | Handheld-first touch UI, mobile workflows |
-| **Desktop Only** | KDE Plasma Desktop | Traditional desktop; gaming tools available without SteamOS session |
 | **Clean Install** | KDE Plasma Desktop only | Fresh Linux install — **no** Steam, Lossless Scaling, or extra gaming preconfig |
+
+**Default passwords (all images):** `root` and user = **`1234`** — change them after first login.
 
 **Downloads:** [Releases](https://github.com/MaSieS4Fun/MaSi-OS/releases) — verify with the `*_SHA256SUMS.txt` files bundled per variant.
 
@@ -85,7 +85,7 @@ Four prebuilt images share the same **multidevice kernel stack** and base Armbia
 - Updated Mesa / GPU stack
 - Steam preconfigured *(SteamOS, Plasma Mobile, Desktop Only)*
 - Lossless Scaling preconfigured *(SteamOS, Plasma Mobile, Desktop Only)*
-- Gamescope, MangoHud, GOverlay, Lutris, AntiMicroX *(where applicable)*
+- Gamescope, MangoHud, Goverlay, Lutris, AntiMicroX *(where applicable)*
 - Gaming-oriented system tweaks
 
 **Clean Install** includes Armbian + Plasma Desktop + the same multidevice kernel — you add software yourself.
@@ -128,45 +128,6 @@ Multidevice images do **not** need manual device-tree selection — the ABL sele
 |-------|--------|
 | MaSi-OS SteamOS-style image — flash & setup | [YouTube](https://www.youtube.com/watch?v=txjB7dYeyIk) |
 | Install & configure Steam + Proton ARM | [YouTube](https://www.youtube.com/watch?v=hT6jeC8ebWY) |
-
----
-
-## First boot
-
-**Default passwords (all images):** `root` and user = **`1234`** — change them after first login.
-
-### SteamOS image
-
-This applies **only** to the **SteamOS** image. The other variants (Plasma Mobile, Desktop Only, Clean Install) are not affected.
-
-The SteamOS image boots into **KDE Plasma Desktop** by default. Before switching to **Gaming Mode** for the first time, you **must sign in to Steam from the desktop session** with your Steam account.
-
-Steam for ARM is still distributed as a **beta**. If you open Gaming Mode without signing in first, Steam tries to update itself, the update **fails**, and the session enters an **error loop** — you cannot use the interface. **Rebooting does not fix it**; you must sign in from the desktop session first.
-
-After signing in, install in Steam:
-
-- **Runtime 4 ARM**
-- **Proton 11 (ARM)** — not the x86 Proton 11 package
-
----
-
-## Known issues
-
-### Proton 11 (ARM) — toolmanifest fix
-
-If Proton 11 (ARM) fails to launch games, edit:
-
-```text
-~/.local/share/Steam/steamapps/common/Proton 11.0 (ARM64)/toolmanifest.vdf
-```
-
-Remove line 5:
-
-```text
-"require_tool_appid" "4185400"
-```
-
-That disables Steam’s validation check for the tool. With the AppID present, the compatibility tool may not start correctly.
 
 ---
 
