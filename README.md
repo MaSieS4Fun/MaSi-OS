@@ -1,6 +1,6 @@
 # MaSi-OS
 
-Preconfigured **Armbian** images for Qualcomm **SM8550** handhelds — gaming, Plasma Desktop, or a clean base install.
+Preconfigured **Armbian** images for Qualcomm **SM8550 SM8650 SM8750** handhelds — gaming, Plasma Desktop, or a clean base install.
 
 Join the community on [Discord](https://discord.gg/Mqegm7PvV9).
 
