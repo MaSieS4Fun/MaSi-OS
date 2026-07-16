@@ -72,23 +72,13 @@ Same game, same settings, same device — **only the kernel differs**.
 </table>
 
 ---
-
-## Image variants
-
-Four prebuilt images share the same **multidevice kernel stack** and base Armbian SM8550 system. They differ in desktop session and preconfiguration.
-
-| Variant | Session / UX | Best for |
-|---------|--------------|----------|
-| **Plasma Mobile** | KDE Plasma Mobile | Handheld-first touch UI, mobile workflows |
-| **Clean Install** | KDE Plasma Desktop only | Fresh Linux install — **no** Steam, Lossless Scaling, or extra gaming preconfig |
-
 **Default passwords (all images):** `root` and user = **`1234`** — change them after first login.
 
 **Downloads:** [Releases](https://github.com/MaSieS4Fun/MaSi-OS/releases) — verify with the `*_SHA256SUMS.txt` files bundled per variant.
 
 ### Shared stack (gaming variants + Desktop Only)
 
-- Latest stable Armbian base (SM8550)
+- Latest stable Armbian base
 - **Multidevice performance-tuned kernel** (ABL `boot/KERNEL`)
 - Updated Mesa / GPU stack
 - Steam preconfigured *(SteamOS, Plasma Mobile, Desktop Only)*
@@ -134,7 +124,7 @@ Multidevice images do **not** need manual device-tree selection — the ABL sele
 
 | Topic | Guide |
 |-------|--------|
-| MaSi-OS SteamOS-style image — flash & setup | [YouTube](https://www.youtube.com/watch?v=txjB7dYeyIk) |
+| Install ROCKNIX ABL | [YouTube](https://www.youtube.com/watch?v=tIUWKaChuuA) |
 | Install & configure Steam + Proton ARM | [YouTube](https://www.youtube.com/watch?v=hT6jeC8ebWY) |
 
 ---
