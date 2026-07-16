@@ -8,7 +8,7 @@ Join the community on [Discord](https://discord.gg/Mqegm7PvV9).
 
 ## Supported devices
 
-One image set boots on multiple AYN and compatible handhelds via an **ABL multidevice `boot/KERNEL`** (11-DTB chain — same idea as ROCKNIX):
+One image set boots on multiple AYN and compatible handhelds via an **ABL multidevice `boot/KERNEL`** (ROCKNIX ABL):
 
 | Device | Status |
 |--------|--------|
