@@ -86,8 +86,6 @@ Same game, same settings, same device — **only the kernel differs**.
 - Gamescope, MangoHud, Goverlay, Lutris, AntiMicroX *(where applicable)*
 - Gaming-oriented system tweaks
 
-**Clean Install** includes Armbian + Plasma Desktop + the same multidevice kernel — you add software yourself.
-
 ---
 
 ## What is NOT included
