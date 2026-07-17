@@ -116,7 +116,7 @@ Users are responsible for obtaining and using software according to the correspo
 
 ### Boot / device tree
 
-Multidevice images do **not** need manual device-tree selection — the ABL selects the correct DTB from the embedded 11-DTB chain.
+Multidevice images do **not** need manual device-tree selection.
 
 ### Video guides
 
