@@ -16,11 +16,8 @@ One image set boots on multiple AYN and compatible handhelds via an **ABL multid
 | AYN Odin 2 Portal | Supported |
 | AYN Odin 2 Mini | Supported |
 | AYN Thor | Supported |
-| AYN Odin 3 | Supported |
 | Retroid Pocket 6 | Supported |
-| KONKR Pocket FIT (G3 Gen 3) | Supported |
 | AYANEO Pocket EVO | Supported |
-| AYANEO Pocket S2 | Supported |
 | AYANEO Pocket ACE | Supported |
 | AYANEO Pocket DS | Supported |
 | AYANEO Pocket DMG | Supported |
