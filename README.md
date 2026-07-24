@@ -1,6 +1,6 @@
 # MaSi-OS
 
-Preconfigured **Armbian** images for Qualcomm **SM8550 SM8650 SM8750** handhelds — gaming, Plasma Desktop.
+Preconfigured **Armbian** images for Qualcomm **SM8550 SM8750** handhelds — gaming, Plasma Desktop.
 
 Join the community on [Discord](https://discord.gg/Mqegm7PvV9).
 
@@ -22,6 +22,7 @@ One image set boots on multiple AYN and compatible handhelds via an **ABL multid
 | AYANEO Pocket DS | Supported |
 | AYANEO Pocket DMG | Supported |
 | AYANEO Pocket S 2K | Supported |
+| AYN Odin 3 | Supported |
 
 The **ABL picks the correct device tree automatically**. Do **not** add `devicetree=` or `dtb=` to the boot cmdline.
 Just flash SD card and enjoy.
