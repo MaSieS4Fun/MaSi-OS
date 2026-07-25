@@ -22,7 +22,7 @@ One image set boots on multiple AYN and compatible handhelds via an **ABL multid
 | AYANEO Pocket DS | Supported |
 | AYANEO Pocket DMG | Supported |
 | AYANEO Pocket S 2K | Supported |
-| AYN Odin 3 | Supported |
+| AYN Odin 3 | Testing |
 
 The **ABL picks the correct device tree automatically**. Do **not** add `devicetree=` or `dtb=` to the boot cmdline.
 Just flash SD card and enjoy.
